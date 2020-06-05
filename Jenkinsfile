@@ -1,11 +1,11 @@
 pipeline{
-   agent any
+   agent ( label 'Test' )
    tools {
       maven 'maven'
       jdk 'JAVA_HOME'
    }
    stages {
-    stage ('build')
+    stage ('build') 
       {
       steps {
       echo "building a maven project"
